@@ -55,7 +55,7 @@ To test the setup in local env
   - Error (Unauthorized 401): If the provided credentials are invalid.
 
 ### User List and Creation View:
-- **URL:** `/api/users/`
+- **URL:** `/api/userkap/`
 - **Method:** GET, POST
 - **Description:** Allows authenticated users to view and create other users' profiles.
 - **Authentication:** Basic Authentication
@@ -69,7 +69,7 @@ To test the setup in local env
 - **Error (401 Unauthorized):** If the user is not authenticated.
 
 ### User Detail View:
-- **URL:** `/api/users/<user_id>/`
+- **URL:** `/api/userkap/<user_id>/`
 - **Method:** GET, PUT, DELETE
 - **Description:** Allows authenticated users to view, update, and delete a specific user's profile.
 - **Authentication:** Basic Authentication
@@ -80,7 +80,7 @@ To test the setup in local env
 - **Error (401 Unauthorized):** If the user is not authenticated.
 
 ### Friend Request Create View:
-- **URL:** `/api/friend-requests/`
+- **URL:** `/api/friend-requests-all/`
 - **Method:** POST
 - **Description:** Allows authenticated users to send friend requests to other users.
 - **Authentication:** Basic Authentication
@@ -91,7 +91,7 @@ To test the setup in local env
 - **Error (400 Bad Request):** If the receiver_id is not provided or invalid.
 
 ### Friend Request List View:
-- **URL:** `/api/friend-requests/`
+- **URL:** `/api/friend-requests-all/`
 - **Method:** GET, POST
 - **Description:** Allows authenticated users to view and create friend requests.
 - **Authentication:** Basic Authentication
@@ -115,7 +115,7 @@ To test the setup in local env
 - **Error (500 Internal Server Error):** If there is an issue sending the email.
 
 ### Friend Request Accept and Reject Views:
-- **URL:** `/api/friend-requests/accept/` and `/api/friend-requests/reject/`
+- **URL:** `/api/accept-friend-request/<int:sender_pk>/` and `/api/reject-friend-request/<int:sender_pk>/`
 - **Method:** POST
 - **Description:** Allows authenticated users to accept or reject friend requests.
 - **Authentication:** Basic Authentication
@@ -126,7 +126,7 @@ To test the setup in local env
 - **Error (400 Bad Request):** If the friend_request_id is not provided or invalid.
 
 ### User Search View:
-- **URL:** `/api/user-search/`
+- **URL:** `/api/search//`
 - **Method:** GET
 - **Description:** Allows authenticated users to search for other users by email or username.
 - **Authentication:** Basic Authentication
